@@ -5,7 +5,7 @@ Description: Printer Friendly Style Sheets
 Plugin URI: http://designmissoula.com
 Author: Bradford Knowlton
 Author URI: http://bradknowlton.com
-Version: 1.0.2
+Version: 1.0.3
 License: GPL2
 Text Domain: dm
 
@@ -31,10 +31,10 @@ GitHub Plugin URI: https://github.com/DesignMissoula/DM-print-styles
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-define( 'DM_PRINT_STYLE_VERSION', '1.0.2' );    
+define( 'DM_PRINT_STYLE_VERSION', '1.0.3' );    
 
 function dm_print_style() {
   wp_enqueue_style( 'dm-print-style', plugins_url( '/css/print.css', __FILE__ ), null, DM_PRINT_STYLE_VERSION, 'print' );
 }
-add_action( 'wp_enqueue_scripts', 'dm_print_style' );
+add_action( 'wp_enqueue_scripts', 'dm_print_style', 999 );
 
